@@ -1,0 +1,12 @@
+# Custom 404 page
+# Any address that is not a real file or folder is answered by 404.php,
+# which shows the custom page and sends a proper "404 Not Found" status.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ 404.php [L]
+</IfModule>
+
+# Fallback if mod_rewrite is unavailable (path is from the domain root on the live server)
+ErrorDocument 404 /404.php

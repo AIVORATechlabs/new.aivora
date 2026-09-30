@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Server-side includes and development files (not pages)
+Disallow: /includes/
+Disallow: /.claude/
+Disallow: /README.md
+Disallow: /enquiry-submit.php
+
+Sitemap: https://www.aivoratechlabs.com/sitemap.xml
+Sitemap: https://www.aivoratechlabs.com/sitemap.txt
